@@ -1,0 +1,247 @@
+/*Colors Used
+Background Color: White #FFF9F9
+Header Text: Black #12ODOD
+Body Text: Black #3E3131
+*/
+/*Layout Styling*/
+* {box-sizing: border-box;}
+@keyframes color-change {
+     0% {fill: #edc655;}
+    50% {fill: #fcffad;}
+    100% {fill: #f76414;}
+    }
+    .sun {
+        animation-duration: 4s;
+        animation-name: color-change;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+@keyframes cloud-move {
+    from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+}
+.cloud-front {
+    animation-duration: 30s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+@keyframes cloud-move-reverse {
+    from {transform: translate(446px,48px);}
+    to{transform: translate(100px,48px);}
+}
+.cloud-back {
+    animation-duration: 34s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+#hero {
+    background-color: FFF9F9;
+    padding: 20px 0;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+#hero span {
+    display: block;
+}
+.css-box-shadow {
+	/*start ------------*/
+	width: [object Object]px; 
+	height: [object Object]px; 
+	background: #FFF9F9; 
+	border: solid #BDBDBD 1px; 
+	box-shadow: 1px -7px 20px rgba(0, 0, 0, 0.5)  ; 
+	-webkit-box-shadow: 1px -7px 20px rgba(0, 0, 0, 0.5)  ; 
+	-moz-box-shadow: 1px -7px 20px rgba(0, 0, 0, 0.5)  ; 
+}
+#hero h1 {
+    margin: 0;
+    padding: 0.67 em 0;
+}
+.container {
+    padding: 0 15px;
+}
+.row {
+    margin: 25px 0;
+}
+.row:after {
+content: "";
+clear: both;
+display: table;
+}
+#title .row {
+    padding: 0 12px;
+}
+.center {
+    text-align: center;
+}
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav > ul > li {
+    display: inline-block;
+}
+nav > ul > li > a {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:#3e3131
+}
+header {
+    background-color: #e4c6c6;
+    text-align: center;
+    padding: 99px 0;
+    margin: 10px;
+    border-bottom: 3px solid #eacdcd; 
+}
+body {
+    background-color: #fff9f9;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #3e3131;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat' ;
+    line-height: 1.4;
+}
+h1{
+    font-size: 2.75em;
+    font-weight: 700;
+    text-align: center;
+}
+h2{
+    font-size: 2.25em;
+    font-weight: 700;
+    text-align: center;
+}
+h3{
+    font-size: 1.75em; 
+    font-weight: 400;
+    text-align: center;
+}
+h4{
+    font-size: 1.35em;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+nav > ul > li > a:hover {
+color: red;
+text-decoration: underline;
+}
+nav > ul > li > a:visited {
+    color:blue;
+
+}
+nav > ul > li > a:active {
+    color:purple;
+
+}
+nav > ul > li > a:focus {
+    outline:2px solid black;
+
+}
+.button {
+    display: inline-block;
+    background-color: #eacdcd;
+    color: #ffffff;
+    font-weight: 400; 
+    text-decoration: none;
+    padding: 10px; 
+    border-radius: 3px; 
+    border-bottom: 2px solid #eacdcd;
+    transition: 0.2s opacity;
+}
+.button:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+.buton.contact {
+    background-color: transparent;
+    color: #eacdcd;
+    text-transform: uppercase;
+    border: 2px solid #eacdcd;
+}
+.buton.contact:hover {
+    background-color: #eacdcd;
+    color: #ffffff;
+}
+.col-sm-12 {
+    width: 100%;
+}
+.about-picture {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+.image-row {
+    display: flex;
+}
+.image-col {
+    padding: 0 10px;
+}
+.social {
+    text-align: center;
+}
+.social a {
+    display: inline-block;
+    max-width: 50px;
+    margin: 0 5px;
+}
+.social svg {
+    width: 50px;
+    height: auto;
+}
+/*Medium devices(640px and larger*/
+@media only screen and (min-width:640px) {
+    header {text-align: unset;
+    }
+    nav { width: auto;
+    float: right; 
+    margin-top: 4px;
+    }
+    body {font-size: 18px;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+}
+
+/*Large devices (1024px or larger)*/
+@media only screen and (min-width:1024px) {
+.col-lg-5 {
+    width: 41.66%
+    }
+.col-lg-6 {
+    width: 50%;
+}
+.col-lg-7 {
+    width: 58.33%
+    }
+.col-lg-12 {
+    width: 100;
+}
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
